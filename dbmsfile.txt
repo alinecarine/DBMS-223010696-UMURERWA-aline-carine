@@ -1,0 +1,220 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use RUHANDE;
+Database changed
+mysql> create table NGOMA (id int(16),f.name char(10),l.name char(10),provence char(10),district char(10),sector char(10),cell char(10),email char(30),telno int(11));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.name char(10),l.name char(10),provence char(10),district char(10),sector char(1' at line 1
+mysql> create table NGOMA (id int(16),fname char(10),lname char(10),provence char(10),district char(10),sector char(10),cell char(10),email char(30),telno int(11));
+Query OK, 0 rows affected, 2 warnings (0.01 sec)
+
+mysql> insert into NGOMA values('1200270034356723','umutoni','ange','north','rulindo','base','cyohoha','abmuton@gmail.com','783509047')
+    -> ;
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select*from database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'database' at line 1
+mysql> select*from NGOMA;
++------------+---------+-------+----------+----------+--------+---------+-------------------+-----------+
+| id         | fname   | lname | provence | district | sector | cell    | email             | telno     |
++------------+---------+-------+----------+----------+--------+---------+-------------------+-----------+
+| 2147483647 | umutoni | ange  | north    | rulindo  | base   | cyohoha | abmuton@gmail.com | 783509047 |
++------------+---------+-------+----------+----------+--------+---------+-------------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> insert into NGOMA values('12002700343563452','mugabo','abasi','north','rulindo','base','cyondo','abasilasu@gmail.com','7835090345');
+Query OK, 1 row affected, 2 warnings (0.01 sec)
+
+mysql> insert into NGOMA values('1200270034354765','umuhire','anne','north','gicumbi','cyungo','kanyonyomba','umuhirean@gmail.com','7835093456');
+Query OK, 1 row affected, 3 warnings (0.00 sec)
+
+mysql> insert into NGOMA values('12002700343452876','umutoniwase','angelique','south','huye','mukoni','agasima','abmutoni90@gmail.com','783509344');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> insert into NGOMA values(('12000701343000873','mukobwajana','aline','south','muhanga','mukoni','agasima','umurerwas00@gmail.com','733509300'),('1200070034345345','usabase','angelique','north','nyabihu','nyanza','kanyoni','usabase@gmail.com','783509345'),('12002800343452273','dukundane','angelo','south','nyanza','cyungo','mukarange','dukundane9@gmail.com','783519249'),('12004700347454873','umutesi','gaga','north','rulindo,'rukozo','rwiri','umutesiga@gmail.com','783509367'),('12001800343454879','hirwa','patrique','south','huye','mukoni','agasima','hirwa45690@gmail.com','783509234'),('12002701343452573','akimanizanye','bella','kigali','gasabo','noruveje','gasabo',izanyebb@gmail.com','7835093600'));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rukozo','rwiri','umutesiga@gmail.com','783509367'),('12001800343454879','hirwa',' at line 1
+mysql> insert into NGOMA values('12000701343000873','mukobwajana','aline','south','muhanga','mukoni','agasima','umurerwas00@gmail.com','733509300');
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> ('1200070034345345','usabase','angelique','north','nyabihu','nyanza','kanyoni','usabase@gmail.com','783509345');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1200070034345345','usabase','angelique','north','nyabihu','nyanza','kanyoni','u' at line 1
+mysql> ('1200070034345345','usabase','angelique','north','nyabihu','nyanza','kanyoni','tiusabase@gmail.com','783509345');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1200070034345345','usabase','angelique','north','nyabihu','nyanza','kanyoni','t' at line 1
+mysql> insert into NGOMA values('1200070134300675','mutoni','aganze','south','muhanga','mukoni','agamutoni','aganzeop@gmail.com','733509309');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select*from ngoma;
++------------+------------+-----------+----------+----------+--------+------------+-----------------------+------------+
+| id         | fname      | lname     | provence | district | sector | cell       | email                 | telno      |
++------------+------------+-----------+----------+----------+--------+------------+-----------------------+------------+
+| 2147483647 | umutoni    | ange      | north    | rulindo  | base   | cyohoha    | abmuton@gmail.com     |  783509047 |
+| 2147483647 | mugabo     | abasi     | north    | rulindo  | base   | cyondo     | abasilasu@gmail.com   | 2147483647 |
+| 2147483647 | umuhire    | anne      | north    | gicumbi  | cyungo | kanyonyomb | umuhirean@gmail.com   | 2147483647 |
+| 2147483647 | umutoniwas | angelique | south    | huye     | mukoni | agasima    | abmutoni90@gmail.com  |  783509344 |
+| 2147483647 | mukobwajan | aline     | south    | muhanga  | mukoni | agasima    | umurerwas00@gmail.com |  733509300 |
+| 2147483647 | mutoni     | aganze    | south    | muhanga  | mukoni | agamutoni  | aganzeop@gmail.com    |  733509309 |
++------------+------------+-----------+----------+----------+--------+------------+-----------------------+------------+
+6 rows in set (0.00 sec)
+
+mysql> insert into NGOMA values('1200370034300665','tuyikunde','becca','','nyagatare','rwiri','cyungo','tuyiribecca@gmail.com','733509398');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into NGOMA values('1200370031300324','tumukunde','banny','west','nyagatare','mukarange','cyondo','niyosnhujojo@gmail.com','733509398');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into NGOMA values('1200370031300324','every','billy','south','nyanza','mukarange','cyungo','izereceline@gmail.com','733509398');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into NGOMA values('1200370031300980','agabe','nory','kigali','nyarugenge','norveje','kacyiru','mukizahaller@gmail.com','783509300');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select*from ngoma;
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+
+| id         | fname      | lname     | provence | district   | sector    | cell       | email                  | telno      |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+
+| 2147483647 | umutoni    | ange      | north    | rulindo    | base      | cyohoha    | abmuton@gmail.com      |  783509047 |
+| 2147483647 | mugabo     | abasi     | north    | rulindo    | base      | cyondo     | abasilasu@gmail.com    | 2147483647 |
+| 2147483647 | umuhire    | anne      | north    | gicumbi    | cyungo    | kanyonyomb | umuhirean@gmail.com    | 2147483647 |
+| 2147483647 | umutoniwas | angelique | south    | huye       | mukoni    | agasima    | abmutoni90@gmail.com   |  783509344 |
+| 2147483647 | mukobwajan | aline     | south    | muhanga    | mukoni    | agasima    | umurerwas00@gmail.com  |  733509300 |
+| 2147483647 | mutoni     | aganze    | south    | muhanga    | mukoni    | agamutoni  | aganzeop@gmail.com     |  733509309 |
+| 2147483647 | tuyikunde  | becca     |          | nyagatare  | rwiri     | cyungo     | tuyiribecca@gmail.com  |  733509398 |
+| 2147483647 | tumukunde  | banny     | west     | nyagatare  | mukarange | cyondo     | niyosnhujojo@gmail.com |  733509398 |
+| 2147483647 | every      | billy     | south    | nyanza     | mukarange | cyungo     | izereceline@gmail.com  |  733509398 |
+| 2147483647 | agabe      | nory      | kigali   | nyarugenge | norveje   | kacyiru    | mukizahaller@gmail.com |  783509300 |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select distinct fname from ngoma;
++------------+
+| fname      |
++------------+
+| umutoni    |
+| mugabo     |
+| umuhire    |
+| umutoniwas |
+| mukobwajan |
+| mutoni     |
+| tuyikunde  |
+| tumukunde  |
+| every      |
+| agabe      |
++------------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma add gender;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> alter table ngoma add 'gender';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''gender'' at line 1
+mysql> alter table ngoma add gender int(9);
+Query OK, 10 rows affected, 1 warning (0.02 sec)
+Records: 10  Duplicates: 0  Warnings: 1
+
+mysql> select*from ngoma;
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+--------+
+| id         | fname      | lname     | provence | district   | sector    | cell       | email                  | telno      | gender |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+--------+
+| 2147483647 | umutoni    | ange      | north    | rulindo    | base      | cyohoha    | abmuton@gmail.com      |  783509047 |   NULL |
+| 2147483647 | mugabo     | abasi     | north    | rulindo    | base      | cyondo     | abasilasu@gmail.com    | 2147483647 |   NULL |
+| 2147483647 | umuhire    | anne      | north    | gicumbi    | cyungo    | kanyonyomb | umuhirean@gmail.com    | 2147483647 |   NULL |
+| 2147483647 | umutoniwas | angelique | south    | huye       | mukoni    | agasima    | abmutoni90@gmail.com   |  783509344 |   NULL |
+| 2147483647 | mukobwajan | aline     | south    | muhanga    | mukoni    | agasima    | umurerwas00@gmail.com  |  733509300 |   NULL |
+| 2147483647 | mutoni     | aganze    | south    | muhanga    | mukoni    | agamutoni  | aganzeop@gmail.com     |  733509309 |   NULL |
+| 2147483647 | tuyikunde  | becca     |          | nyagatare  | rwiri     | cyungo     | tuyiribecca@gmail.com  |  733509398 |   NULL |
+| 2147483647 | tumukunde  | banny     | west     | nyagatare  | mukarange | cyondo     | niyosnhujojo@gmail.com |  733509398 |   NULL |
+| 2147483647 | every      | billy     | south    | nyanza     | mukarange | cyungo     | izereceline@gmail.com  |  733509398 |   NULL |
+| 2147483647 | agabe      | nory      | kigali   | nyarugenge | norveje   | kacyiru    | mukizahaller@gmail.com |  783509300 |   NULL |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+--------+
+10 rows in set (0.00 sec)
+
+mysql> update ngoma set gender='f'where provence='north';
+Query OK, 3 rows affected, 3 warnings (0.00 sec)
+Rows matched: 3  Changed: 3  Warnings: 3
+
+mysql> select*from ngoma;
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+--------+
+| id         | fname      | lname     | provence | district   | sector    | cell       | email                  | telno      | gender |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+--------+
+| 2147483647 | umutoni    | ange      | north    | rulindo    | base      | cyohoha    | abmuton@gmail.com      |  783509047 |      0 |
+| 2147483647 | mugabo     | abasi     | north    | rulindo    | base      | cyondo     | abasilasu@gmail.com    | 2147483647 |      0 |
+| 2147483647 | umuhire    | anne      | north    | gicumbi    | cyungo    | kanyonyomb | umuhirean@gmail.com    | 2147483647 |      0 |
+| 2147483647 | umutoniwas | angelique | south    | huye       | mukoni    | agasima    | abmutoni90@gmail.com   |  783509344 |   NULL |
+| 2147483647 | mukobwajan | aline     | south    | muhanga    | mukoni    | agasima    | umurerwas00@gmail.com  |  733509300 |   NULL |
+| 2147483647 | mutoni     | aganze    | south    | muhanga    | mukoni    | agamutoni  | aganzeop@gmail.com     |  733509309 |   NULL |
+| 2147483647 | tuyikunde  | becca     |          | nyagatare  | rwiri     | cyungo     | tuyiribecca@gmail.com  |  733509398 |   NULL |
+| 2147483647 | tumukunde  | banny     | west     | nyagatare  | mukarange | cyondo     | niyosnhujojo@gmail.com |  733509398 |   NULL |
+| 2147483647 | every      | billy     | south    | nyanza     | mukarange | cyungo     | izereceline@gmail.com  |  733509398 |   NULL |
+| 2147483647 | agabe      | nory      | kigali   | nyarugenge | norveje   | kacyiru    | mukizahaller@gmail.com |  783509300 |   NULL |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+--------+
+10 rows in set (0.00 sec)
+
+mysql> alter table ngoma drop gender;
+Query OK, 10 rows affected (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select*from ngoma
+    -> ;
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+
+| id         | fname      | lname     | provence | district   | sector    | cell       | email                  | telno      |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+
+| 2147483647 | umutoni    | ange      | north    | rulindo    | base      | cyohoha    | abmuton@gmail.com      |  783509047 |
+| 2147483647 | mugabo     | abasi     | north    | rulindo    | base      | cyondo     | abasilasu@gmail.com    | 2147483647 |
+| 2147483647 | umuhire    | anne      | north    | gicumbi    | cyungo    | kanyonyomb | umuhirean@gmail.com    | 2147483647 |
+| 2147483647 | umutoniwas | angelique | south    | huye       | mukoni    | agasima    | abmutoni90@gmail.com   |  783509344 |
+| 2147483647 | mukobwajan | aline     | south    | muhanga    | mukoni    | agasima    | umurerwas00@gmail.com  |  733509300 |
+| 2147483647 | mutoni     | aganze    | south    | muhanga    | mukoni    | agamutoni  | aganzeop@gmail.com     |  733509309 |
+| 2147483647 | tuyikunde  | becca     |          | nyagatare  | rwiri     | cyungo     | tuyiribecca@gmail.com  |  733509398 |
+| 2147483647 | tumukunde  | banny     | west     | nyagatare  | mukarange | cyondo     | niyosnhujojo@gmail.com |  733509398 |
+| 2147483647 | every      | billy     | south    | nyanza     | mukarange | cyungo     | izereceline@gmail.com  |  733509398 |
+| 2147483647 | agabe      | nory      | kigali   | nyarugenge | norveje   | kacyiru    | mukizahaller@gmail.com |  783509300 |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> select id,fname,lname from ngoma where provence='north'and district='rulindo';
++------------+---------+-------+
+| id         | fname   | lname |
++------------+---------+-------+
+| 2147483647 | umutoni | ange  |
+| 2147483647 | mugabo  | abasi |
++------------+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select id,fname,lname from ngoma where provence='north'or district='rulindo';
++------------+---------+-------+
+| id         | fname   | lname |
++------------+---------+-------+
+| 2147483647 | umutoni | ange  |
+| 2147483647 | mugabo  | abasi |
+| 2147483647 | umuhire | anne  |
++------------+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select*from ngoma
+    -> ;
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+
+| id         | fname      | lname     | provence | district   | sector    | cell       | email                  | telno      |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+
+| 2147483647 | umutoni    | ange      | north    | rulindo    | base      | cyohoha    | abmuton@gmail.com      |  783509047 |
+| 2147483647 | mugabo     | abasi     | north    | rulindo    | base      | cyondo     | abasilasu@gmail.com    | 2147483647 |
+| 2147483647 | umuhire    | anne      | north    | gicumbi    | cyungo    | kanyonyomb | umuhirean@gmail.com    | 2147483647 |
+| 2147483647 | umutoniwas | angelique | south    | huye       | mukoni    | agasima    | abmutoni90@gmail.com   |  783509344 |
+| 2147483647 | mukobwajan | aline     | south    | muhanga    | mukoni    | agasima    | umurerwas00@gmail.com  |  733509300 |
+| 2147483647 | mutoni     | aganze    | south    | muhanga    | mukoni    | agamutoni  | aganzeop@gmail.com     |  733509309 |
+| 2147483647 | tuyikunde  | becca     |          | nyagatare  | rwiri     | cyungo     | tuyiribecca@gmail.com  |  733509398 |
+| 2147483647 | tumukunde  | banny     | west     | nyagatare  | mukarange | cyondo     | niyosnhujojo@gmail.com |  733509398 |
+| 2147483647 | every      | billy     | south    | nyanza     | mukarange | cyungo     | izereceline@gmail.com  |  733509398 |
+| 2147483647 | agabe      | nory      | kigali   | nyarugenge | norveje   | kacyiru    | mukizahaller@gmail.com |  783509300 |
++------------+------------+-----------+----------+------------+-----------+------------+------------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql>
